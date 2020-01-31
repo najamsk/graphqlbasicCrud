@@ -1,0 +1,8 @@
+{
+    "customers": [
+    {"id":"1", "name":"najam awan", "age":"36", "email":"najamsk@gmail.com"},
+    {"id":"2", "name":"habib satti", "age":"37", "email":"mhabib@gmail.com"},
+    {"id":"3", "name":"waqas ashraf", "age":"38", "email":"ashraf@gmail.com"},
+    {"id":"4", "name":"naeem awan", "age":"39", "email":"naeem@gmail.com"}
+    ]
+}
