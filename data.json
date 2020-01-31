@@ -1,28 +1,28 @@
 {
-    "customers": [
-        {
-            "id":"1",
-            "name":"najam sikander awan",
-            "age":"36",
-            "email":"najamsk@gmail.com"
-        },
-        {
-            "id":"2",
-            "name":"habib satti",
-            "age":"37",
-            "email":"mhabib@gmail.com"
-        },
-        {
-            "id":"3",
-            "name":"waqas ashraf",
-            "age":"38",
-            "email":"ashraf@gmail.com"
-        },
-        {
-            "id":"4",
-            "name":"naeem awan",
-            "age":"39",
-            "email":"naeem@gmail.com"
-        }
-    ]
+  "customers": [
+    {
+      "id": "1",
+      "name": "najam sikander awan khan",
+      "age": "36",
+      "email": "najamsk@gmail.com"
+    },
+    {
+      "id": "3",
+      "name": "waqas ashraf",
+      "age": "38",
+      "email": "ashraf@gmail.com"
+    },
+    {
+      "id": "4",
+      "name": "naeem awan",
+      "age": "39",
+      "email": "naeem@gmail.com"
+    },
+    {
+      "name": "fakhar abbas",
+      "email": "fakhar@jsp.com",
+      "age": 10,
+      "id": "Qwh50Un"
+    }
+  ]
 }

@@ -59,6 +59,55 @@ const RootQuery = new GraphQLObjectType({
 
 });
 
+//mutations
+const mutation = new GraphQLObjectType({
+    name:'Mutation',
+    fields: {
+        addCustomer: {
+            type: CustomerType,
+            args:{
+                name: {type: new GraphQLNonNull(GraphQLString)},
+                email: {type: new GraphQLNonNull(GraphQLString)},
+                age: {type: new GraphQLNonNull(GraphQLInt)}
+            },
+            resolve(parent, args){
+                return axios.post('http://localhost:3000/customers',
+                                  {
+                                      name: args.name,
+                                      email: args.email,
+                                      age: args.age
+                                  })
+                    .then( res => res.data);
+            }
+        }, //add customers
+        deleteCustomer: {
+            type: CustomerType,
+            args:{
+                id: {type: new GraphQLNonNull(GraphQLString)}
+            },
+            resolve(parent, args){
+                return axios.delete('http://localhost:3000/customers/' + args.id)
+                    .then( res => res.data);
+            }
+        }, //delete customers
+        updateCustomer: {
+            type: CustomerType,
+            args:{
+                id: {type: new GraphQLNonNull(GraphQLString)},
+                name: {type: GraphQLString},
+                email: {type: GraphQLString},
+                age: {type: GraphQLInt}
+            },
+            resolve(parent, args){
+                return axios.patch('http://localhost:3000/customers/' + args.id, args)
+                    .then( res => res.data);
+            }
+        }, //update customers
+    }
+});
+
+
 module.exports = new GraphQLSchema({
-    query: RootQuery, 
+    query: RootQuery,
+    mutation
 });
